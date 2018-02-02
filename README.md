@@ -23,7 +23,7 @@
 
 ## Structure
 
-* getScore.py 模拟登陆，爬虫获得成绩
+* getScore.py： 模拟登陆，爬虫获得成绩
 * parseParameter.py：从conf.ini中提取统一认证的用户名、密码和所需要发送到的邮箱
 * sendEmail ： 发邮件
 * Main.py ：run!

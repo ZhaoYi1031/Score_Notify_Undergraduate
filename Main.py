@@ -26,7 +26,7 @@ if __name__ == '__main__':
                 if (len(ansNew) != len(ans)):
                     print("NEW!!!")
                     print('第Query',tot,'次查询: ',ansNew)
-                    send_email("zhaoyi1031@gmail.com", "zy12345678", [to], "New Score Appears!", "Now:\n"+str(ans))
+                    send_email("zhaoyi1031@gmail.com", "zy12345678", [to], "New Score Appears!", "Now:\n"+str(ansNew))
                 tot = tot+1
 #                print('Query',tot,': ',ansNew)
                 break
