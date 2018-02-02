@@ -6,11 +6,13 @@
 
 ## Requirements and Prerequisites:
 
-* Python 3.x
-  * BeautifulSoup 4.5.1
-  * PIL 1.1.7
-  * pytesser 0.0.1
+对于依赖的python包，直接`pip install -r requirements.txt`
 
+环境及依赖包如下
+
+* Python 3.x
+  * bs4 0.0.1（pip install即安装好beautifulsoup4）
+  * lxml 4.1.1
 
 ## Tips
 
@@ -25,6 +27,12 @@
 * parseParameter.py：从conf.ini中提取统一认证的用户名、密码和所需要发送到的邮箱
 * sendEmail ： 发邮件
 * Main.py ：run!
+
+## Notes
+
+当前脚本是在校园网环境下使用的，如果想要在外网环境下使用，应该要先连接vpn，或者是把url改成e.buaa.edu.cn等。
+
+
 
 
 
