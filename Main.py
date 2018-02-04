@@ -16,8 +16,8 @@ if __name__ == '__main__':
             exit(0)
 
     print(ans)
-    send_email("zhaoyi1031@gmail.com", "zy12345678", [to], "This is a mail to start to score notify by ohazyi.", "First:\n"+str(ans))
-    
+    send_email("zhaoyi1031@gmail.com", "zy12345678", [to], "A mail start to score notification.", "目前已知的成绩汇总:\n"+str(ans))
+
     tot = 0
     while True:
         while True:
@@ -25,8 +25,13 @@ if __name__ == '__main__':
                 ansNew = getScore(username, password)
                 if (len(ansNew) != len(ans)):
                     print("NEW!!!")
-                    print('第Query',tot,'次查询: ',ansNew)
-                    send_email("zhaoyi1031@gmail.com", "zy12345678", [to], "New Score Appears!", "Now:\n"+str(ansNew))
+                    print("第Query",tot,"次查询: ",ansNew)
+                    for  i in ansNew:
+                        if not i in ans:
+                            newCourse = i
+                            newScore = ansNew[i]
+                    nowTime = time.strftime("%m-%d %H:%M:%S", time.localtime())
+                    send_email("zhaoyi1031@gmail.com", "zy12345678", [to], "New Score Appears!", newCourse + " 出分了！\n"+"当前时间: "+nowTime+"\n"+"新出的课程: "+newCourse+"   成绩: "+newScore+"\n"+"已知的成绩汇总: "+str(ansNew))
                 tot = tot+1
 #                print('Query',tot,': ',ansNew)
                 break
@@ -34,6 +39,3 @@ if __name__ == '__main__':
                 print("error")
         ans = ansNew
         time.sleep(5)
-        
-
-
