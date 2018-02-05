@@ -34,7 +34,7 @@
 
 ## 效果展示图
 
-![IMG_3503.PNG](https://i.loli.net/2018/02/06/5a7881956711d.png)
+![IMG_3503_Fotor.jpg](https://i.loli.net/2018/02/06/5a7885b4830df.jpg)
 
 
 
